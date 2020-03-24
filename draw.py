@@ -1,19 +1,23 @@
+import draw_final_path
+
+
 import turtle
 import random
 
 
 def draw_maze(maze_array):
 
-    for x_index in range(0, 100):
-        for y_index in range(0, 50):
+    for x_index in range(0, 50):
+        for y_index in range(0, 24):
+            pass
             draw_square(x_index, y_index, maze_array[y_index][x_index])
 
     # <x>, <y> = <Top Left> : <Bottom Right>
 
-    # 48, 24 = -10, 10
-    # 49, 24 = 0, 10
-    # 48, 25 = -10, 0
-    # 49, 25 = 0, 0
+    # 23, 11 = -20, 20
+    # 24, 11 = 0, 20
+    # 23, 12 = -20, 0
+    # 24, 12 = 0, 0
 
     # 48x = -10 : (x - 49) * 10
     # 49x = 0 : (x - 49) * 10
@@ -29,8 +33,8 @@ def draw_square(x_index, y_index, color_value):
     turtle_object.color(colour)
     turtle_object.fillcolor(colour)
 
-    x_top_left = (x_index - 50) * 10
-    y_top_left = (y_index - 25) * -10
+    x_top_left = (x_index - 25) * 20
+    y_top_left = (y_index - 12) * -20
 
     turtle_object.begin_fill()
 
@@ -38,176 +42,20 @@ def draw_square(x_index, y_index, color_value):
 
     turtle_object.pendown()
 
-    turtle_object.forward(9)
+    turtle_object.forward(19)
     turtle_object.right(90)
 
-    turtle_object.forward(9)
+    turtle_object.forward(19)
     turtle_object.right(90)
 
-    turtle_object.forward(9)
+    turtle_object.forward(19)
     turtle_object.right(90)
 
-    turtle_object.forward(9)
+    turtle_object.forward(19)
 
     turtle_object.end_fill()
 
     turtle_object.penup()
-
-
-def draw_path(path):
-    for t in path:
-        draw_path_square(t[0], t[1], "left->bottom")
-
-
-def draw_path_square(x_index, y_index, square_type):
-    x_top_left = (x_index - 50) * 10
-    y_top_left = (y_index - 25) * -10
-
-
-
-
-    #
-    # if square_type == "left->right":
-    #     turtle_object.setheading(0)
-    #     turtle_object.color("red")
-    #
-    #     y_offsets = (0, 1, 8, 9)
-    #     for offset in y_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left, y_top_left - offset)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    # elif square_type == "left->top":
-    #     turtle_object.setheading(0)
-    #     turtle_object.color("red")
-    #
-    #     y_offsets = (8, 9)
-    #     for offset in y_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left, y_top_left - offset)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    #     turtle_object.setheading(-90)
-    #     x_offsets = (8, 9)
-    #     for offset in x_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left + offset, y_top_left)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    #     x_offsets = (0, 1)
-    #     for offset in x_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left + offset, y_top_left)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(2)
-    #
-    # elif square_type == "left->bottom":
-    #     turtle_object.setheading(0)
-    #     turtle_object.color("red")
-    #
-    #     y_offsets = (0, 1)
-    #     for offset in y_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left, y_top_left - offset)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    #     turtle_object.setheading(-90)
-    #     x_offsets = (8, 9)
-    #     for offset in x_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left + offset, y_top_left)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    #     x_offsets = (0, 1)
-    #     for offset in x_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left + offset, y_top_left - 8)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(2)
-    #
-    # elif square_type == "top->right":
-    #     turtle_object.setheading(0)
-    #     turtle_object.color("red")
-    #
-    #     y_offsets = (0, 1)
-    #     for offset in y_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left, y_top_left - offset)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    #     turtle_object.setheading(-90)
-    #     x_offsets = (8, 9)
-    #     for offset in x_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left + offset, y_top_left)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    #     x_offsets = (0, 1)
-    #     for offset in x_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left + offset, y_top_left - 8)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(2)
-    #
-    # elif square_type == "top->bottom":
-    #     turtle_object.setheading(-90)
-    #     turtle_object.color("red")
-    #
-    #     x_offsets = (0, 1, 8, 9)
-    #     for offset in x_offsets:
-    #         turtle_object.penup()
-    #         turtle_object.setposition(x_top_left + offset, y_top_left)
-    #         turtle_object.pendown()
-    #
-    #         turtle_object.forward(10)
-    #
-    # elif square_type == "bottom->right":
-    #     pass
-
-    # turtle_object.setheading(0)
-    # turtle_object.color("red")
-    #
-    # # line_lengths = (9, 9, 9, 8, 8, 7, 7, 7)
-    # # for length in line_lengths:
-    # #     turtle_object.forward(length)
-    # #     turtle_object.right(90)
-    #
-    # turtle_object.setposition((x_index - 50) * 10, (y_index - 25) * -10)
-    # turtle_object.pendown()
-    # turtle_object.forward(10)
-    # turtle_object.penup()
-    #
-    # turtle_object.setposition((x_index - 50) * 10, (y_index - 25) * -10 - 1)
-    # turtle_object.pendown()
-    # turtle_object.forward(10)
-    # turtle_object.penup()
-    #
-    # turtle_object.setposition((x_index - 50) * 10, (y_index - 25) * -10 - 8)
-    # turtle_object.pendown()
-    # turtle_object.forward(10)
-    # turtle_object.penup()
-    #
-    # turtle_object.setposition((x_index - 50) * 10, (y_index - 25) * -10 - 9)
-    # turtle_object.pendown()
-    # turtle_object.forward(10)
-    # turtle_object.penup()
 
 
 def left_click(x, y):
@@ -221,19 +69,80 @@ def read_maze(path):
     return maze_array
 
 
+def draw_start_finish(coords, start):
+    if coords[0] - coords[2] == -1:
+        x_top_left = ((coords[0] - 25) * 20) + 16
+        y_top_left = ((coords[1] - 12) * -20) - 6
+
+    elif coords[0] - coords[2] == 1:
+        x_top_left = ((coords[2] - 25) * 20) + 16
+        y_top_left = ((coords[3] - 12) * -20) - 6
+
+    elif coords[1] - coords[3] == -1:
+        x_top_left = ((coords[0] - 25) * 20) + 6
+        y_top_left = ((coords[1] - 12) * -20) - 16
+
+    else:
+        # elif coords[1] - coords[3] == 1:
+        x_top_left = ((coords[2] - 25) * 20) + 6
+        y_top_left = ((coords[3] - 12) * -20) - 16
+
+    turtle_object.setheading(0)
+
+    turtle_object.color("yellow")
+    if start:
+        turtle_object.fillcolor("blue")
+
+    else:
+        turtle_object.fillcolor("purple")
+
+    turtle_object.begin_fill()
+
+    turtle_object.penup()
+    turtle_object.setposition(x_top_left, y_top_left)
+    turtle_object.pendown()
+
+    turtle_object.forward(7)
+    turtle_object.right(90)
+
+    turtle_object.forward(7)
+    turtle_object.right(90)
+
+    turtle_object.forward(7)
+    turtle_object.right(90)
+
+    turtle_object.forward(7)
+
+    turtle_object.end_fill()
+
+    turtle_object.penup()
+
+
 def draw_border():
     turtle_object.setheading(0)
     turtle_object.color("blue")
-    turtle_object.setposition(-503, 253)
+    turtle_object.setposition(-503, 243)
 
     turtle_object.pendown()
 
-    line_lengths = (1005, 505, 1005, 504, 1004, 503, 1003, 502, 1002, 501, 1001, 501)
+    line_lengths = (1005, 485, 1005, 484, 1004, 483, 1003, 482, 1002, 481, 1001, 481)
     for length in line_lengths:
         turtle_object.forward(length)
         turtle_object.right(90)
 
     turtle_object.penup()
+
+
+def random_sub_point():
+    random_x = random.randint(1, 48)
+    random_y = random.randint(1, 22)
+
+    if random.random() > 0.5:
+        sub_point = (random_x, random_y, random_x + (1 if random.random() > 0.5 else -1), random_y)
+    else:
+        sub_point = (random_x, random_y, random_x, random_y + (1 if random.random() > 0.5 else -1))
+
+    return sub_point
 
 
 def main():
@@ -253,7 +162,25 @@ def main():
 
     draw_border()
     draw_maze(maze_array)
-    draw_path([(0, 1), (1, 1), (1, 2), (1, 3), (1, 4), (2, 4), (3, 4), (3, 3), (3, 2), (3, 1), (3, 0)])
+    draw_final_path.draw_path(turtle_object,
+                              [(20, 1), (21, 1), (21, 2), (21, 3), (20, 3), (19, 3), (18, 3),
+                               (17, 3), (16, 3), (15, 3), (15, 2), (15, 1), (16, 1)])
+
+    # start = (0, 0, 0, 0)
+    # finish = (0, 0, 0, 0)
+    #
+    # while start == finish:
+    #     start = random_sub_point()
+    #     finish = random_sub_point()
+    #
+    # print(f"Start Point: {start}")
+    # print(f"End Point: {finish}")
+    #
+    # draw_start_finish(start, True)
+    # draw_start_finish(finish, False)
+
+    draw_start_finish((16, 1, 17, 1), True)
+    draw_start_finish((19, 1, 20, 1), False)
 
     window.update()
 
