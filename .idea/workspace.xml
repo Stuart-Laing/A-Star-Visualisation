@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ed6d11b-691e-49d0-abed-5856001120f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI Demo.pdn" beforeDir="false" afterPath="$PROJECT_DIR$/UI Demo.pdn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_final_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_final_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze-demo.pdn" beforeDir="false" afterPath="$PROJECT_DIR$/maze-demo.pdn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze-demo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Demo-Mazes/maze.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +32,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/maze_solver" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sturt\OneDrive\Desktop\Projects\Maze-Solver\maze_solver" />
+      <recent name="C:\Users\Stuart\OneDrive\Desktop\Projects\Maze-Solver" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sturt\OneDrive\Desktop\Projects\Maze-Solver\maze_solver" />
+      <recent name="C:\Users\Stuart\OneDrive\Desktop\Projects\Maze-Solver\Demo-Mazes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.maze_solver">
     <configuration name="draw" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Maze-Solver" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,8 +71,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="maze_solver" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Maze-Solver" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maze_solver" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.maze_solver" />
+      <item itemvalue="Python.draw" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.maze_solver" />
         <item itemvalue="Python.draw" />
       </list>
     </recent_temporary>
@@ -78,6 +118,8 @@
       <workItem from="1584962268692" duration="26000" />
       <workItem from="1584962296694" duration="5717000" />
       <workItem from="1584997444043" duration="18226000" />
+      <workItem from="1585047849472" duration="23270000" />
+      <workItem from="1585077337602" duration="5429000" />
     </task>
     <servers />
   </component>
@@ -98,36 +140,50 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="446" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585082913993">
+      <screen x="65" y="0" width="1855" height="1080" />
+    </state>
+    <state x="446" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.0.1855.1080@65.0.1855.1080" timestamp="1585082913993" />
+    <state x="-1122" y="752" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585067573049">
+      <screen x="-1858" y="360" width="1858" height="1080" />
+    </state>
+    <state x="-1122" y="752" key="#com.intellij.fileTypes.FileTypeChooser/-1858.360.1858.1080/62.0.2498.1440@-1858.360.1858.1080" timestamp="1585067573049" />
+    <state x="1051" y="523" key="#com.intellij.fileTypes.FileTypeChooser/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585065245223" />
     <state x="772" y="295" key="FileChooserDialogImpl" timestamp="1584962306000">
       <screen x="65" y="0" width="1855" height="1080" />
     </state>
     <state x="772" y="295" key="FileChooserDialogImpl/65.0.1855.1080@65.0.1855.1080" timestamp="1584962306000" />
-    <state width="695" height="1312" key="GridCell.Tab.0.bottom" timestamp="1585015686843">
-      <screen x="62" y="0" width="2498" height="1440" />
+    <state width="1812" height="126" key="GridCell.Tab.0.bottom" timestamp="1585083403066">
+      <screen x="65" y="0" width="1855" height="1080" />
     </state>
-    <state width="695" height="1312" key="GridCell.Tab.0.bottom/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585015686843" />
-    <state width="1812" height="295" key="GridCell.Tab.0.bottom/65.0.1855.1080@65.0.1855.1080" timestamp="1584971943830" />
-    <state width="695" height="1312" key="GridCell.Tab.0.center" timestamp="1585015686843">
-      <screen x="62" y="0" width="2498" height="1440" />
+    <state width="695" height="952" key="GridCell.Tab.0.bottom/-1858.360.1858.1080/62.0.2498.1440@-1858.360.1858.1080" timestamp="1585069735427" />
+    <state width="695" height="1312" key="GridCell.Tab.0.bottom/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585076857987" />
+    <state width="1812" height="126" key="GridCell.Tab.0.bottom/65.0.1855.1080@65.0.1855.1080" timestamp="1585083403066" />
+    <state width="1812" height="126" key="GridCell.Tab.0.center" timestamp="1585083403066">
+      <screen x="65" y="0" width="1855" height="1080" />
     </state>
-    <state width="695" height="1312" key="GridCell.Tab.0.center/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585015686843" />
-    <state width="1812" height="295" key="GridCell.Tab.0.center/65.0.1855.1080@65.0.1855.1080" timestamp="1584971943830" />
-    <state width="695" height="1312" key="GridCell.Tab.0.left" timestamp="1585015686843">
-      <screen x="62" y="0" width="2498" height="1440" />
+    <state width="695" height="952" key="GridCell.Tab.0.center/-1858.360.1858.1080/62.0.2498.1440@-1858.360.1858.1080" timestamp="1585069735426" />
+    <state width="695" height="1312" key="GridCell.Tab.0.center/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585076857987" />
+    <state width="1812" height="126" key="GridCell.Tab.0.center/65.0.1855.1080@65.0.1855.1080" timestamp="1585083403066" />
+    <state width="1812" height="126" key="GridCell.Tab.0.left" timestamp="1585083403066">
+      <screen x="65" y="0" width="1855" height="1080" />
     </state>
-    <state width="695" height="1312" key="GridCell.Tab.0.left/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585015686843" />
-    <state width="1812" height="295" key="GridCell.Tab.0.left/65.0.1855.1080@65.0.1855.1080" timestamp="1584971943830" />
-    <state width="695" height="1312" key="GridCell.Tab.0.right" timestamp="1585015686843">
-      <screen x="62" y="0" width="2498" height="1440" />
+    <state width="695" height="952" key="GridCell.Tab.0.left/-1858.360.1858.1080/62.0.2498.1440@-1858.360.1858.1080" timestamp="1585069735426" />
+    <state width="695" height="1312" key="GridCell.Tab.0.left/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585076857987" />
+    <state width="1812" height="126" key="GridCell.Tab.0.left/65.0.1855.1080@65.0.1855.1080" timestamp="1585083403066" />
+    <state width="1812" height="126" key="GridCell.Tab.0.right" timestamp="1585083403066">
+      <screen x="65" y="0" width="1855" height="1080" />
     </state>
-    <state width="695" height="1312" key="GridCell.Tab.0.right/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585015686843" />
-    <state width="1812" height="295" key="GridCell.Tab.0.right/65.0.1855.1080@65.0.1855.1080" timestamp="1584971943830" />
+    <state width="695" height="952" key="GridCell.Tab.0.right/-1858.360.1858.1080/62.0.2498.1440@-1858.360.1858.1080" timestamp="1585069735427" />
+    <state width="695" height="1312" key="GridCell.Tab.0.right/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585076857987" />
+    <state width="1812" height="126" key="GridCell.Tab.0.right/65.0.1855.1080@65.0.1855.1080" timestamp="1585083403066" />
     <state x="1032" y="461" width="540" height="524" key="StructurePopup" timestamp="1585013952950">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state x="1032" y="461" width="540" height="524" key="StructurePopup/-1858.360.1858.1080/62.0.2498.1440@62.0.2498.1440" timestamp="1585013952950" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Maze_Solver$draw.coverage" NAME="draw Coverage Results" MODIFIED="1585015661693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Maze_Solver$__main__.coverage" NAME="maze_solver Coverage Results" MODIFIED="1585083403035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/Maze_Solver$draw.coverage" NAME="draw Coverage Results" MODIFIED="1585078974080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
