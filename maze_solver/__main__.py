@@ -43,8 +43,8 @@ while start == finish or not clean:
     elif maze_array[finish[0]][finish[1]] == 1:
         clean = False
 
-start = (15, 40)
-finish = (19, 2)
+# start = (15, 40)
+# finish = (19, 2)
 
 print(start, finish)
 
